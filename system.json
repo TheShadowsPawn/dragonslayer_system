@@ -1,0 +1,100 @@
+{
+  "name": "dsl",
+  "id": "dsl",
+  "title": "Dragonslayer",
+  "description": "Classic Fantasy Role-Playing Game",
+  "version": "AUTOMATICALLY REPLACED BY GITHUB WORKFLOW ACTION",
+  "minimumCoreVersion": "10",
+  "compatibleCoreVersion": "11",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "11",
+    "maximum": "11"
+  },
+  "author": "Maintained by the Burning Banshees",
+  "authors": [
+    {
+      "name": "ShadowsPawn",
+      "email": "theshadowspawn@protonmail.com",
+      "url": ""
+    }
+  ],
+  "esmodules": [
+    "dist/dsl.js"
+  ],
+  "styles": [
+    "dist/dsl.css"
+  ],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English (UK)",
+      "path": "dist/lang/en.json"
+    },
+    {
+      "lang": "it",
+      "name": "Italiano (Italia)",
+      "path": "dist/lang/it.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français (France)",
+      "path": "dist/lang/fr.json"
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "dist/lang/pt-BR.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español (España)",
+      "path": "dist/lang/es.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch (Deutschland)",
+      "path": "dist/lang/de.json"
+    },
+    {
+      "lang": "ca",
+      "name": "Català (Andorra)",
+      "path": "dist/lang/ca.json"
+    },
+    {
+      "lang": "cn",
+      "name": "简体中文 (中国)",
+      "path": "dist/lang/zh-CN.json"
+    },
+    {
+      "lang": "sv",
+      "name": "Svenska (Sverige)",
+      "path": "dist/lang/sv.json"
+    },
+    {
+      "lang": "pl",
+      "name": "Polski (Polska)",
+      "path": "dist/lang/pl.json"
+    },
+    {
+      "lang": "ko",
+      "name": "한국어 (한국)",
+      "path": "dist/lang/ko.json"
+    },
+    {
+      "lang": "ru",
+      "name": "Русский (Россия)",
+      "path": "dist/lang/ru.json"
+    }
+  ],
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "url": "AUTOMATICALLY REPLACED BY GITHUB WORKFLOW ACTION",
+  "manifest": "AUTOMATICALLY REPLACED BY GITHUB WORKFLOW ACTION",
+  "download": "AUTOMATICALLY REPLACED BY GITHUB WORKFLOW ACTION",
+  "bugs": "",
+  "flags": {
+    "allowBugReporter": true
+  }
+}
