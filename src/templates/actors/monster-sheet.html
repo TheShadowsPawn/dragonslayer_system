@@ -1,0 +1,46 @@
+<form class="{{cssClass}}" autocomplete="off">
+  {{! Sheet Header }}
+  <header class="sheet-header flexrow">
+    {{> (path "/templates/actors/partials/monster-header.html") }}
+  </header>
+
+  {{! Sheet Tab Navigation }}
+  <nav class="sheet-tabs tabs flexrow" data-group="primary">
+    <a class="item" data-tab="attributes">
+      {{localize "DSL.category.attributes"}}
+    </a>
+    {{#if system.config.enableInventory}}
+    <a class="item" data-tab="inventory">
+      {{localize "DSL.category.inventory"}}
+    </a>
+    {{/if}} {{#if system.spells.enabled}}
+    <a class="item" data-tab="spells"> {{localize "DSL.category.spells"}} </a>
+    {{/if}}
+    <a class="item" data-tab="notes"> {{localize "DSL.category.notes"}} </a>
+  </nav>
+  {{! Sheet Body }}
+  <section class="sheet-body">
+    {{! Attributes Tab }}
+    <div class="tab" data-group="primary" data-tab="attributes">
+      {{> (path "/templates/actors/partials/monster-attributes-tab.html") }}
+    </div>
+    {{#if system.config.enableInventory}}
+    <div class="tab" data-group="primary" data-tab="inventory">
+      {{> (path "/templates/actors/partials/character-inventory-tab.html") }}
+    </div>
+    {{/if}} {{#if system.spells.enabled }}
+    <div class="tab" data-group="primary" data-tab="spells">
+      {{> (path "/templates/actors/partials/character-spells-tab.html") }}
+    </div>
+    {{/if}}
+    <div class="tab" data-group="primary" data-tab="notes">
+      <div class="inventory">
+        <div class="item-category-title">{{localize "DSL.category.notes"}}</div>
+        <div class="resizable-editor" data-editor-size="320">
+          {{editor enrichedBiography target="system.details.biography"
+          button=true editable=editable async=true}}
+        </div>
+      </div>
+    </div>
+  </section>
+</form>

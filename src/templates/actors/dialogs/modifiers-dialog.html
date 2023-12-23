@@ -1,0 +1,68 @@
+<form autocomplete="off">
+  <div class="attribute-bonuses">
+    <label>{{localize 'DSL.scores.str.long'}}</label>
+    <ol>
+      <li>
+        {{localize 'DSL.Melee'}} ({{mod @root.system.scores.str.mod}})
+      </li>
+      <li>
+        {{localize 'DSL.exploration.od.long'}} ({{@root.system.scores.str.od}} in 6)
+      </li>
+    </ol>
+  </div>
+  <div class="attribute-bonuses">
+    <label>{{localize 'DSL.scores.int.long'}}</label>
+    <ol>
+      <li>
+        {{localize 'DSL.SpokenLanguages'}} ({{localize @root.system.scores.int.spoken}})
+      </li>
+      <li>
+        {{localize 'DSL.Literacy'}} ({{localize @root.system.scores.int.literacy}})
+      </li>
+    </ol>
+  </div>
+  <div class="attribute-bonuses">
+    <label>{{localize 'DSL.scores.wis.long'}}</label>
+    <ol>
+      <li>
+        {{localize 'DSL.saves.magic.long'}} ({{mod @root.system.scores.wis.mod}})
+      </li>
+    </ol>
+  </div>
+  <div class="attribute-bonuses">
+    <label>{{localize 'DSL.scores.dex.long'}}</label>
+    <ol>
+      <li>
+        {{localize 'DSL.Missile'}} ({{mod @root.system.scores.dex.mod}})
+      </li>
+      <li>
+        {{localize 'DSL.Initiative'}} ({{mod @root.system.scores.dex.init}})
+      </li>
+      <li>
+        {{localize 'DSL.ArmorClass'}} ({{mod @root.system.scores.dex.mod}})
+      </li>
+    </ol>
+  </div>
+  <div class="attribute-bonuses">
+    <label>{{localize 'DSL.scores.con.long'}}</label>
+    <ol>
+      <li>
+        {{localize 'DSL.Health'}} ({{mod @root.system.scores.con.mod}})
+      </li>
+    </ol>
+  </div>
+  <div class="attribute-bonuses">
+    <label>{{localize 'DSL.scores.cha.long'}}</label>
+    <ol>
+      <li>
+        {{localize 'DSL.NPCReaction'}} ({{mod @root.system.scores.cha.npc}})
+      </li>
+      <li>
+        {{localize 'DSL.RetainersMax'}} ({{add @root.system.scores.cha.mod 4}})
+      </li>
+      <li>
+        {{localize 'DSL.Loyalty'}} ({{add @root.system.scores.cha.mod 7}})
+      </li>
+    </ol>
+  </div>
+</form>
