@@ -79,14 +79,14 @@ export const DSL = {
   saves_short: {
     death: "DSL.saves.death.short",
     wand: "DSL.saves.wand.short",
-    paralysis: "DSL.saves.paralysis.short",
+    stone: "DSL.saves.stone.short",
     breath: "DSL.saves.breath.short",
     spell: "DSL.saves.spell.short",
   },
   saves_long: {
     death: "DSL.saves.death.long",
     wand: "DSL.saves.wand.long",
-    paralysis: "DSL.saves.paralysis.long",
+    stone: "DSL.saves.stone.long",
     breath: "DSL.saves.breath.long",
     spell: "DSL.saves.spell.long",
   },
