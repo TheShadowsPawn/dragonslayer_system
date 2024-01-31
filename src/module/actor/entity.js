@@ -131,7 +131,7 @@ export default class DslActor extends Actor {
         wand: {
           value: saves.w,
         },
-        paralysis: {
+        stone: {
           value: saves.p,
         },
         breath: {
