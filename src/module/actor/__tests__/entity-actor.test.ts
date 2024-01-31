@@ -170,93 +170,93 @@ export default ({
     const saves = [
       {
         low: -99,
-        high: 1,
-        death: 14,
-        wands: 15,
-        paralysis: 16,
-        breath: 17,
-        spell: 18,
+        high: 0,
+        death: 16,
+        wands: 18,
+        stone: 17,
+        breath: 16,
+        spell: 19,
       },
       {
         low: 1,
-        high: 3,
-        death: 12,
-        wands: 13,
-        paralysis: 14,
+        high: 2,
+        death: 14,
+        wands: 16,
+        stone: 15,
+        breath: 16,
+        spell: 17,
+      },
+      {
+        low: 3,
+        high: 4,
+        death: 13,
+        wands: 15,
+        stone: 14,
         breath: 15,
         spell: 16,
       },
       {
-        low: 4,
+        low: 5,
         high: 6,
-        death: 10,
-        wands: 11,
-        paralysis: 12,
+        death: 11,
+        wands: 13,
+        stone: 12,
         breath: 13,
         spell: 14,
       },
       {
         low: 7,
-        high: 9,
+        high: 8,
+        death: 10,
+        wands: 13,
+        stone: 11,
+        breath: 12,
+        spell: 13,
+      },
+      {
+        low: 9,
+        high: 10,
         death: 8,
+        wands: 10,
+        stone: 9,
+        breath: 9,
+        spell: 11,
+      },
+      {
+        low: 11,
+        high: 12,
+        death: 7,
         wands: 9,
-        paralysis: 10,
-        breath: 10,
-        spell: 12,
-      },
-      {
-        low: 10,
-        high: 12,
-        death: 6,
-        wands: 7,
-        paralysis: 8,
-        breath: 8,
-        spell: 10,
-      },
-      {
-        low: 10,
-        high: 12,
-        death: 6,
-        wands: 7,
-        paralysis: 8,
+        stone: 8,
         breath: 8,
         spell: 10,
       },
       {
         low: 13,
-        high: 15,
-        death: 4,
-        wands: 5,
-        paralysis: 6,
+        high: 14,
+        death: 5,
+        wands: 7,
+        stone: 6,
         breath: 5,
         spell: 8,
       },
       {
-        low: 16,
-        high: 18,
-        death: 2,
-        wands: 3,
-        paralysis: 4,
-        breath: 3,
-        spell: 6,
+        low: 15,
+        high: 16,
+        death: 4,
+        wands: 6,
+        stone: 5,
+        breath: 4,
+        spell: 7,
       },
       {
-        low: 19,
-        high: 21,
-        death: 2,
-        wands: 2,
-        paralysis: 2,
-        breath: 2,
-        spell: 4,
-      },
-      {
-        low: 22,
+        low: 17,
         high: 99,
-        death: 2,
-        wands: 2,
-        paralysis: 2,
-        breath: 2,
-        spell: 2,
+        death: 3,
+        wands: 5,
+        stone: 4,
+        breath: 4,
+        spell: 6,
       },
     ];
 
@@ -271,7 +271,7 @@ export default ({
       { low: 6, high: 7, value: 13 },
       { low: 7, high: 9, value: 12 },
       { low: 9, high: 11, value: 11 },
-      { low: 11, high: 13, value: 1 },
+      { low: 11, high: 13, value: 10 },
       { low: 13, high: 15, value: 9 },
       { low: 15, high: 17, value: 8 },
       { low: 17, high: 19, value: 7 },
@@ -294,7 +294,7 @@ export default ({
       it(`hd ${hd} generates correct saves`, () => {
         expect(actor?.system.saves.death.value).equal(savesData?.death);
         expect(actor?.system.saves.wand.value).equal(savesData?.wands);
-        expect(actor?.system.saves.paralysis.value).equal(savesData?.paralysis);
+        expect(actor?.system.saves.stone.value).equal(savesData?.stone);
         expect(actor?.system.saves.breath.value).equal(savesData?.breath);
         expect(actor?.system.saves.spell.value).equal(savesData?.spell);
       });
@@ -343,7 +343,7 @@ export default ({
       await trashChat();
     });
 
-    const saves = ["death", "wand", "paralysis", "breath", "spell"];
+    const saves = ["death", "wand", "stone", "breath", "spell"];
     saves.forEach((save) => {
       it(`is functional for ${save} saves on character`, async () => {
         const actor = (await createMockActor("character")) as DslActor;
