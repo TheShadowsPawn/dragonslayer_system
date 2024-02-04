@@ -431,6 +431,11 @@ export default class DslActor extends Actor {
       dmgParts.push(data.scores.str.mod);
     }
 
+  // Add Dex to missile damage
+    if (attData.roll.type === "missile" && data.scores.dex.mod) {
+      dmgParts.push(data.scores.dex.mod);
+    }
+
     // Damage roll
     DslDice.Roll({
       event: options.event,
