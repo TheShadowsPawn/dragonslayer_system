@@ -233,7 +233,7 @@ const DslDice = {
       }
     } else if (this.attackIsSuccess(roll, result.target, targetAc)) {
       // Answer is bounded betweewn AC -3 and 9 (unarmored) and is shown in chat card
-      const value = Math.clamped(result.target - roll.total, -3, 9);
+      const value = Math.clamped(result.target - roll.total, -10, 10);
       result.details = game.i18n.format("DSL.messages.AttackSuccess", {
         result: value,
         bonus: result.target,
