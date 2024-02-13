@@ -242,23 +242,23 @@ export default ({
         await trashChat();
       });
 
-      describe("Death/Poison", () => {
+      describe("Death", () => {
         describe("Can roll", () => canRollSave("death"));
       });
 
-      describe("Wands", () => {
+      describe("Wand", () => {
         describe("Can roll", () => canRollSave("wand"));
       });
 
-      describe("Paralysis/Petrify", () => {
-        describe("Can roll", () => canRollSave("paralysis"));
+      describe("Stone", () => {
+        describe("Can roll", () => canRollSave("stone"));
       });
 
-      describe("Breath Attacks", () => {
+      describe("Breath", () => {
         describe("Can roll", () => canRollSave("breath"));
       });
 
-      describe("Spells/Rods/Staves", () => {
+      describe("Spell", () => {
         describe("Can roll", () => canRollSave("spell"));
       });
     });
