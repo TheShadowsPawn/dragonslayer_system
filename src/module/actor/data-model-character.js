@@ -87,7 +87,7 @@ export default class DslDataModelCharacter extends foundry.abstract.DataModel {
       saves: new SchemaField({
         breath: new SchemaField({ value: new NumberField({ integer: true }) }),
         death: new SchemaField({ value: new NumberField({ integer: true }) }),
-        paralysis: new SchemaField({
+        stone: new SchemaField({
           value: new NumberField({ integer: true }),
         }),
         spell: new SchemaField({ value: new NumberField({ integer: true }) }),
