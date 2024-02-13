@@ -780,7 +780,7 @@ export default ({
 
   // @todo: Refactor to entity and just use event parsing in sheet
   describe("_rollSave(event)", () => {
-    const saves = ["death", "wand", "paralysis", "breath", "spell"];
+    const saves = ["death", "wand", "stone", "breath", "spell"];
 
     const clickSave = async (save: string) => {
       $(`li[data-save=${save}] a`).trigger("click");
