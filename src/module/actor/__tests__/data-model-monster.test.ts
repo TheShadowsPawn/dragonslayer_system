@@ -135,7 +135,7 @@ export default ({
         subFields: [
           { subField: "breath", subSubField: ["value"] },
           { subField: "death", subSubField: ["value"] },
-          { subField: "paralysis", subSubField: ["value"] },
+          { subField: "stone", subSubField: ["value"] },
           { subField: "spell", subSubField: ["value"] },
           { subField: "wand", subSubField: ["value"] },
         ],
@@ -166,7 +166,7 @@ export default ({
             saves: {
               breath: { value: 0 },
               death: { value: 0 },
-              paralysis: { value: 0 },
+              stone: { value: 0 },
               spell: { value: 0 },
               wand: { value: 0 },
             },
@@ -185,7 +185,7 @@ export default ({
             saves: {
               breath: { value: 10 },
               death: { value: 0 },
-              paralysis: { value: 0 },
+              stone: { value: 0 },
               spell: { value: 0 },
               wand: { value: 0 },
             },
