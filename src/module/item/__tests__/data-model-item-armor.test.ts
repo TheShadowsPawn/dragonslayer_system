@@ -21,6 +21,9 @@ export default ({ describe, it, expect }: QuenchMethods) => {
     it("Has light", () => {
       expect(dataTypes.light).equal("DSL.armor.light");
     });
+    it("Has medium", () => {
+      expect(dataTypes.heavy).equal("DSL.armor.medium");
+    });
     it("Has heavy", () => {
       expect(dataTypes.heavy).equal("DSL.armor.heavy");
     });
