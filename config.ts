@@ -93,6 +93,7 @@ export const DSL = {
   armor: {
     unarmored: "DSL.armor.unarmored",
     light: "DSL.armor.light",
+    medium: "DSL.armor.medium",
     heavy: "DSL.armor.heavy",
     shield: "DSL.armor.shield",
   },
