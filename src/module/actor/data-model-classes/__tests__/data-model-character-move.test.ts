@@ -53,6 +53,7 @@ export default ({ describe, it, expect }: QuenchMethods) => {
       enc = new EncumbranceBasic(undefined, [
         createMockItem("armor", 100, 1, { type: "unarmored", equipped: true }),
         createMockItem("armor", 100, 1, { type: "light", equipped: false }),
+        createMockItem("armor", 100, 1, { type: "medium", equipped: false }),
         createMockItem("armor", 100, 1, { type: "heavy", equipped: false }),
       ]);
       move = new DslDataModelCharacterMove(enc);
