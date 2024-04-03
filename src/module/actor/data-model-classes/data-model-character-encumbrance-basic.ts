@@ -49,7 +49,8 @@ export default class DslDataModelCharacterEncumbranceBasic
   static armorWeight = {
     unarmored: 0,
     light: 1,
-    heavy: 2,
+    medium:2,
+    heavy: 3,
   };
 
   #weight;
