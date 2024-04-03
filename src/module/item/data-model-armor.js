@@ -5,6 +5,7 @@ export default class DslDataModelArmor extends foundry.abstract.DataModel {
   static ArmorTypes = {
     unarmored: "DSL.armor.unarmored",
     light: "DSL.armor.light",
+    medium: "DSL.armor.light",
     heavy: "DSL.armor.heavy",
     shield: "DSL.armor.shield",
   };
