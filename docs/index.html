@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8" />
-  <title>Old School Essentials system for Foundry VTT</title>
+  <title>Dragonslayer system for Foundry VTT</title>
   <meta name="description" content="" />
   <meta name="author" content="" />
 
@@ -33,7 +33,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <section class="header">
     <h2>Dragonslayer</h2>
-    <p>Official open source game system for Foundry VTT</p>
+    <p>Official game system for Foundry VTT</p>
   </section>
   <div class="container">
     <nav class="navbar">
@@ -67,7 +67,7 @@
       <div class="column" style="margin-top: 10%;">
         <p>
           This Foundry VTT game system has all the features you need to play
-          Old-School Essentials.
+          Dragonslayer.
         </p>
         <p>
           This comprehensive user guide will show you the basics and explain all the features
@@ -79,8 +79,8 @@
           <a href="https://foundryvtt.com/kb/" target="_blank">Knowledge base</a>.
         </p>
         <p>
-          Please see the <a href="https://github.com/vttred/ose/#readme">project readme</a>
-          for a list of places to receive Old-School Essentials - Foundry VTT Edition support.
+          Please see the <a href="https://github.com/TheShadowsPawn/dragonslayer_system/#readme">project readme</a>
+          for a list of places to receive Dragonslayer - Foundry VTT Edition support.
         </p>
       </div>
     </div>
@@ -103,14 +103,13 @@
           Go to Game Systems, Install System.
         </li>
         <li>
-          Search for 'Old-School Essentials' or 'ose' and click the Install button.
+          Search for 'Dragonslayer' or 'dsl' and click the Install button.
         </li>
         <li>
-          Optionally install the free, community-created Classic Fantasy Compendium
-          or the Advanced Fantasy premium content module. You do not need both (or either).
+          Optionally install the Dragonslayer Content premium content module.
         </li>
         <li>
-          Create a new game world, selecting Old-School Essentials from the game system
+          Create a new game world, selecting Dragonslayer from the game system
           dropdown menu.
         </li>
       </ol>
@@ -118,91 +117,12 @@
       <h4>Setup</h4>
       <p>You can find game system settings by navigating to the Settings Directory
         (the gears icon), clicking the Configure Settings button, and clicking
-        Old-School Essentials in the dialog box.</p>
+        Dragonslayer in the dialog box.</p>
       <p style="text-align: center;">
         <img src="./images/settings.png" />
       </p>
       <p>
-        These are several settings to customize your experience with Old
-        School Essentials.
-      <ul>
-        <li><strong>Initiative</strong><br />
-          <strong>Group initiative:</strong> every combatant in the same group
-          will have the same initiative roll result (but their final initiative
-          may be modified by abilities).<br />
-          <strong>Individual initiative:</strong> every combatant will have its
-          own initiative roll. Characters will show an initiative modifier on
-          their character sheets, see the <a href="#attributes">Attributes</a> section.
-        </li>
-        <li><strong>Initiative persistence:</strong><br />
-          <strong>Keep each round:</strong> initiative is automatically rolled
-          at the beginning of each combat, and the number does not change between rounds.<br />
-          <strong>Reset each round:</strong> initiative result is removed at the beginning
-          of each round and not automatically re-rolled. Players will have to click to roll
-          new initiative.<br />
-          <strong>Reroll each round:</strong> initiative is automatically rolled
-          at the beginning of each round.
-
-        </li>
-        <li><strong>Ascending Armor Class:</strong> By default, Old-School Essentials
-          uses the original descending Armor Class and the 'To Hit Armour Class 0' attack
-          statistic, also known as THAC0. When checked, this setting will use the optional
-          rules for AAC and AB (attack bonus) given in Old-School Essentials.
-        </li>
-        <li><strong>Monster Morale</strong>: This enables the optional rule for Monster Morale
-          from Old-School Essentials. Record and roll a Morale check to see
-          whether a monster decides to flee under perilous conditions.
-        </li>
-        <li><strong>Encumbrance:</strong> The weight of items a character carries may
-          modify their movement rate. The modified movement rate for each encumbrance threshold
-          is documented in the Old-School Essential rules.
-          <ul>
-            <li><strong>Disabled:</strong> You can disable the effect of
-              weight and armor on movement.</li>
-            <li><strong>Basic:</strong> Movement is calculated from the
-              armour type and whether you are carrying more than
-              "significant" treasure.</li>
-            <li><strong>Detailed:</strong> If the character carries any "adventuring gear,"
-              80 coins of weight will be added to the character's total encumbrance.
-              The weight of other equipment is counted individually. </li>
-            <li><strong>Complete:</strong> Each and every item, including adventuring gear,
-              will count towards a character's encumbrance.
-            </li>
-            <li><strong>Item-based:</strong> Items are generally counted as one unit of weight,
-              but two-handed items are counted as two units, and small items are not encumbering. Refer to Carcass Crawler Issue Two.</li> 
-          </ul>
-        </li>
-        <li><strong>Significant treasure weight:</strong> If you have the
-          Basic encumbrance option enabled, the movement rate will depend on
-          a predefined weight at which you consider the treasure to be
-          cumbersome. You can set the value here and it will be used to
-          determine the movement rates of characters.
-        </li>
-        <li>
-          <strong>Languages:</strong> Characters and monsters can select
-          languages they speak from a list given here. Classic Fantasy compendium
-          languages are already included by default.
-        </li>
-        <li>
-          <strong>Token Damage Target:</strong> Chat cards will ask the user whether
-          they're successful attack will deal damage. This setting affects which type
-          of targeting system they'd like to use.
-          <ul>
-            <li><strong>Selected:</strong> The selected token receives the damage.</li>
-            <li><strong>Target:</strong> The currently targeted token receives the damage 
-              (even if it wasn't the target when the attack was rolled).</li>
-            <li><strong>Original Target:</strong> The token that was targeted when the
-            attack was rolled receives the damage (even if a different token is targeted when
-            the damage button is pushed).</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Invert Ctrl/Meta Key behavior:</strong> Many of the game system's automated
-          dice rolls will show a dialog box to input modifiers to the dice roll by default, but this
-          dialog box can be skipped by holding Ctrl (on Windows) or Meta (on Mac). Checking this box
-          will make the dialog boxes skip automatically, but show when the Ctrl/Meta key is held down.
-        </li>
-      </ul>
+        These are several settings to customize your experience with Dragonslayer.
       </p>
     </div>
     <hr />
@@ -224,9 +144,6 @@
             <li><strong>Don't apply weapon bonus to damage roll:</strong> A weapon's bonus (e.g. +1, +2)
               will only augment the attack of the weapon. You may use this to write your damage bonus in
               the damage input box instead.
-            </li>
-            <li><strong>Initiative Bonus:</strong> Will add this value to
-              initiative in addition to the Dexterity modifier.
             </li>
             <li><strong>Next Level:</strong> The threshold at which the
               level field in the header section of the character sheet will
@@ -452,7 +369,7 @@
         When you open the weapon sheet by clicking on the pen icon, you
         can edit the stats and add new tags. The Melee and Missile icons, when clicked, will make
         the weapon use your character's melee or missile modifiers. If both are active,
-        the system will prompt the userwhether the weapon is being held or thrown when attacking.
+        the system will prompt the user whether the weapon is being held or thrown when attacking.
       </p>
       <p style="text-align: center;">
         <img src="./images/weapon.png" />
@@ -472,7 +389,7 @@
       <p>
         At the bottom of the inventory view is the encumbrance bar.
         Weight, visualized here as a percentage with thresholds and a maximum,
-        is used for automatic mouvement calculation. Your encumbrance max value
+        is used for automatic movement calculation. Your encumbrance max value
         is 1600 by default, and at each threshold shown, the character's movement will degrade.
       </p>
       <h4 class="docs-header">Notes</h4>
@@ -519,7 +436,7 @@
       </p>
       <p>The first row below the name contains rollable fields.
         The alignment roll icon rolls a plain 2d6 on the
-        reaction table. Numb appearing (NA) can be rolled and
+        reaction table. Number appearing (NA) can be rolled and
         morale (optional) as well. XP award is just plain text.</p>
       <p>The Treasure type can show a link to a rollable table. You may drop a
         rollable table onto a monster sheet to show it here. Right clicking the
@@ -532,7 +449,7 @@
       <p>
         Hit Points can be silently rolled as you click the dice icon
         next to it. Hit dice must be a rollable string.
-        AC (or AAC) is manually typed here. Clicking on THAC0 (or AB) will
+        AC is manually typed here. Clicking on THAC0 will
         launch an unarmed attack for 1d6 damage.
       </p>
       <p>
