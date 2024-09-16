@@ -32,7 +32,7 @@ const DslDice = {
     }
 
     // ;
-    const roll = new Roll(parts.join("+"), data).evaluate({ async: false });
+    const roll = new Roll(parts.join("+"), data).evaluate;
 
     // Convert the roll to a chat message and return the roll
     let rollMode = game.settings.get("core", "rollMode");
@@ -301,10 +301,8 @@ const DslDice = {
     // Optionally include a situational bonus
     if (form !== null && form.bonus.value) parts.push(form.bonus.value);
 
-    const roll = new Roll(parts.join("+"), data).evaluate({ async: false });
-    const dmgRoll = new Roll(data.roll.dmg.join("+"), data).evaluate({
-      async: false,
-    });
+    const roll = new Roll(parts.join("+"), data).evaluate;
+    const dmgRoll = new Roll(data.roll.dmg.join("+"), data).evaluate;
 
     // Convert the roll to a chat message and return the roll
     let rollMode = game.settings.get("core", "rollMode");
