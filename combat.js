@@ -29,7 +29,7 @@ const DslCombat = {
     // Roll init
     for (const group in groups) {
       // Object.keys(groups).forEach((group) => {
-      const roll = new Roll("1d6").evaluate({ async: false });
+      const roll = new Roll("1d6").evaluate;
       await roll.toMessage({
         flavor: game.i18n.format("DSL.roll.initiative", {
           group: CONFIG.DSL.colors[group],
