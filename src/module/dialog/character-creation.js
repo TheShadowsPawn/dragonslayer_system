@@ -102,7 +102,7 @@ export default class DslCharacterCreator extends FormApplication {
       roll: {},
     };
     if (options.skipMessage) {
-      return new Roll(rollParts[0]).evaluate({ async: false });
+      return new Roll(rollParts[0]).evaluate;
     }
     // Roll and return
     return DslDice.Roll({
