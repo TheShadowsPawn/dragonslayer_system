@@ -18,7 +18,6 @@ import DslItem from "./module/item/entity";
 import DslItemSheet from "./module/item/item-sheet";
 
 import * as chat from "./module/helpers-chat";
-import DslCombat from "./module/combat";
 import DSL from "./module/config";
 import registerFVTTModuleAPIs from "./module/fvttModuleAPIs";
 import handlebarsHelpers from "./module/helpers-handlebars";
@@ -32,27 +31,51 @@ import * as treasure from "./module/helpers-treasure";
 
 import "./e2e";
 
+// Combat
+import { DSLGroupCombat } from "./module/combat/combat-group";
+import { DSLGroupCombatant } from "./module/combat/combatant-group";
+import { DSLCombat } from "./module/combat/combat";
+import { DSLCombatant } from "./module/combat/combatant";
+import { DSLCombatTab } from "./module/combat/sidebar";
+
+
+
+
+
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
 /* -------------------------------------------- */
 
 Hooks.once("init", async () => {
-  /**
-   * Set an initiative formula for the system
-   *
-   * @type {string}
-   */
-  CONFIG.Combat.initiative = {
-    formula: "1d6 + @init",
-    decimals: 2,
-  };
 
   CONFIG.DSL = DSL;
+
+  // if (game.system.id === 'DSL-dev') {
+    CONFIG.debug = {
+      ...CONFIG.debug,
+      combat: true,
+    }
+  // }
+
+  // Register custom system settings
+  registerSettings();
+
+  const isGroupInitiative = game.settings.get(game.system.id, "initiative") === "group";
+  if (isGroupInitiative) { 
+    CONFIG.Combat.documentClass = DSLGroupCombat;
+    CONFIG.Combatant.documentClass = DSLGroupCombatant;
+    CONFIG.Combat.initiative = { decimals: 2, formula: DSLGroupCombat.FORMULA }
+  } else {
+    CONFIG.Combat.documentClass = DSLCombat;
+    CONFIG.Combatant.documentClass = DSLCombatant;
+    CONFIG.Combat.initiative = { decimals: 2, formula: DSLCombat.FORMULA }
+  }
+
+  CONFIG.ui.combat = DSLCombatTab;
 
   game.dsl = {
     rollItemMacro: macros.rollItemMacro,
     rollTableMacro: macros.rollTableMacro,
-    dslCombat: DslCombat,
   };
 
   // Init Party Sheet handler
@@ -173,21 +196,6 @@ Hooks.on("renderSidebarTab", async (object, html) => {
     });
   }
 });
-
-Hooks.on("preCreateCombatant", (combat, data, options, id) => {
-  const init = game.settings.get(game.system.id, "initiative");
-  if (init === "group") {
-    DslCombat.addCombatant(combat, data, options, id);
-  }
-});
-
-Hooks.on("updateCombatant", DslCombat.debounce(DslCombat.updateCombatant), 100);
-Hooks.on("renderCombatTracker", DslCombat.debounce(DslCombat.format, 100));
-Hooks.on("preUpdateCombat", DslCombat.preUpdateCombat);
-Hooks.on(
-  "getCombatTrackerEntryContext",
-  DslCombat.debounce(DslCombat.addContextEntry, 100)
-);
 
 Hooks.on("renderChatLog", (app, html) => DslItem.chatListeners(html));
 Hooks.on("getChatLogEntryContext", chat.addChatMessageContextOptions);
