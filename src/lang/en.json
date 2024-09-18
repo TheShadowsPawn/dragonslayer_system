@@ -8,6 +8,7 @@
   "DSL.Reset": "Reset",
   "DSL.Cancel": "Cancel",
   "DSL.Roll": "Roll",
+  "DSL.Reroll": "Reroll",
   "DSL.Success": "Success",
   "DSL.Failure": "Failure",
 
@@ -304,6 +305,7 @@
   "DSL.colors.orange": "Orange",
   "DSL.colors.white": "White",
 
+  "DSL.colors.black": "Black",
   "DSL.reaction.check": "Reaction Check",
   "DSL.reaction.Hostile": "{name} is Hostile",
   "DSL.reaction.Unfriendly": "{name} is Unfriendly",
@@ -311,6 +313,8 @@
   "DSL.reaction.Indifferent": "{name} is Indifferent",
   "DSL.reaction.Friendly": "{name} is Friendly",
 
+  "DSL.combat.SetCombatantAsActive": "Set Active",
+  "DSL.combat.SetCombatantGroups": "Set Combatant Groups",
   "DSL.CombatFlag.SpellDeclared": "Spell Declared",
   "DSL.CombatFlag.RetreatFromMeleeDeclared": "Retreat From Melee Declared",
 
