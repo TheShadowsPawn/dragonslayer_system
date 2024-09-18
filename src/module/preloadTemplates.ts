@@ -23,6 +23,11 @@ const preloadHandlebarsTemplates = async () => {
     // Party Sheet
     `${DSL.systemPath()}/templates/apps/party-sheet.html`,
     // `${DSL.systemPath()}/templates/apps/party-xp.html`,
+        // Combat Tab
+    `${DSL.systemPath()}/templates/sidebar/combat-tracker.hbs`,
+    `${DSL.systemPath()}/templates/sidebar/combat-tracker-combatant-individual.hbs`,
+    `${DSL.systemPath()}/templates/sidebar/combat-tracker-combatant-group.hbs`,
+    `${DSL.systemPath()}/templates/apps/combat-set-groups.hbs`,
   ];
   return loadTemplates(templatePaths);
 };
