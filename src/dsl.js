@@ -50,7 +50,7 @@ Hooks.once("init", async () => {
 
   CONFIG.DSL = DSL;
 
-  // if (game.system.id === 'DSL') {
+  // if (game.system.id === 'dsl') {
     CONFIG.debug = {
       ...CONFIG.debug,
       combat: true,
