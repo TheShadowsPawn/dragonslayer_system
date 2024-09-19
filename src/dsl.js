@@ -29,7 +29,6 @@ import * as renderList from "./module/renderList";
 import registerSettings from "./module/settings";
 import * as treasure from "./module/helpers-treasure";
 
-import "./e2e";
 
 // Combat
 import { DSLGroupCombat } from "./module/combat/combat-group";
